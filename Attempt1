@@ -53,7 +53,7 @@ app.layout = html.Div([
             placeholder='Select-year'
         )),
     html.Div([#TASK 2.3: Add a division for output display
-    html.Div(id='output-container', className='chart-gird', style={'flex'}),])
+    html.Div(id='output-container', className='chart-grid', style={'flex'}),])
 ])
 #TASK 2.4: Creating Callbacks
 # Define the callback function to update the input container based on the selected statistics
@@ -74,7 +74,7 @@ def update_input_container(Yearly_Statisctics):
     [Input(component_id='select-year', component_property='value'), Input(component_id='select-year', component_property='value')])
 
 
-def update_output_container(Yearly_Statisctics, Recession_Period_Statisctics):
+def update_output_container(Yearly Statisctics, Recession Period Statisctics):
     if selected_statistics == 'Recession Period Statistics':
         # Filter the data for recession periods
         recession_data = data[data['Recession'] == 1]
