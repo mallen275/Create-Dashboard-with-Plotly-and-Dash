@@ -40,11 +40,12 @@ app.layout = html.Div([
         html.Label("Select Statistics:"),
         dcc.Dropdown(
             id='dropdown-statistics',
-            options=[{'label': 'Yearly Statistics', 'value': 'Yearly Statistics'},{'label': 'Recession Period Statistics', 'value': 'Recession Period Statistics'}],
+            options=dropdown_options,
             value='Select Statisctics',
             placeholder='Select a report type'
+			style= {'padding' : '3px'}
         )
-    ]),
+    ], style= {'margin": '10px'), 
     html.Div(dcc.Dropdown(
             id='select-year',
             options=[{'label': i, 'value': i} for i in year_list],
